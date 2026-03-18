@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.hero{
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba (0, 0, 0, 0.5);
+    transition: 0.2s ease;
+}
+
+.hero:hover{
+    transform: scale(1.005);
+}
+
+.hero-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.7) contrast(1.05);
+    transition: 0.4s;
+ 
+}
+
+
+
+.hero:hover .hero-image{
+    filter: brightness(0.6) contrast(1.1);
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+
+}
+
+.hero-title {
+            font-size: clamp(2.2rem, 8vw, 4.5rem); 
+            line-height: 1.2;
+            font-weight: 900;
+            max-width: 12ch;              
+            margin-bottom: 0.75rem;
+            text-shadow: black;
+            
+        }
+
+
+.hero-subtitle{
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    font-weight: 500;
+    max-width: 50ch;
+    margin-bottom: 2rem;
+    text-shadow: black;
+}
+
+.hero-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.7rem 2.5rem;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 25px 50px -12px rgba (0, 0, 0, 0.5);
+    transition: 0.2s ease;
+    
+}
+
+.hero-button:hover{
+    background: green;
+    color: white;
+}
+
+
+@media (max-width: 480px) {
+            .hero-content {
+                padding: 7rem 1.9rem;
+            }
+            .hero-button {
+                padding: 0.6rem 1.7rem;
+                font-size: 0.9rem;
+            }
+        }
+
